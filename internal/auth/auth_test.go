@@ -1,20 +1,19 @@
 package auth
 
 import (
-    "testing"
+	"testing"
 )
 
 // TestHelloName calls greetings.Hello with a name, checking
 // for a valid return value.
 func TestHelloName(t *testing.T) {
-  res, err := GetAPIKey(nil)
+	res, err := GetAPIKey(nil)
 
-  if err == nil {
-    t.Fatalf("expected error, got %v", err)
-  }
+	if err == nil {
+		t.Fatalf("expected error, got %v", err)
+	}
 
-  if res != "" {
-    t.Fatal("expected empty response")
-  }
+	if res != "" {
+		t.Fatal("expected empty response")
+	}
 }
-
